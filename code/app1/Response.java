@@ -1,0 +1,29 @@
+package app1;
+
+public class Response {
+
+    private Double valorFinal;
+    private Double valorParcela;
+    private Integer parcelas;
+    private Double valorCupom;
+
+    public Response(Double valorFinal, double valorParcelas, Integer parcelas, Double valorCupom) {
+        this.valorFinal = valorFinal;
+    }
+
+    public double lerTotal() {
+        return this.valorFinal;
+    }
+
+    public double lerValorParcela() {
+        return this.valorParcela;
+    }
+
+    public int lerParcelas() {
+        return this.parcelas;
+    }
+
+    public double lerValorCupom() {
+        return this.valorCupom;
+    }
+}
