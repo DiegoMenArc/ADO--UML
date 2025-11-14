@@ -1,4 +1,4 @@
-package app1;
+package Pedidos;
 
 import javax.swing.JOptionPane;
 
