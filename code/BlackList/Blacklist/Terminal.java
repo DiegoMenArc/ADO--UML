@@ -1,8 +1,9 @@
-package BlackList;
+package Blacklist;
 
 import javax.swing.JOptionPane;
 
 public class Terminal {
+    BlackList b = new BlackList();
 
     public void prt(String msg) {
         System.out.println(msg);
@@ -24,9 +25,10 @@ public class Terminal {
         return JOptionPane.showInputDialog(msg);
     }
 
-    public Integer menu() {
+    public void menu() {
         Integer e;
         e = Integer.parseInt(JOptionPane.showInputDialog(null, """
+            Escolha uma ação
                 1. Cadastrar nome
                 2. Lista de nomes
                 3. Alterar nome
@@ -34,17 +36,13 @@ public class Terminal {
 
                 0. Sair
                 """, "MENU", 1));
-        while (e < 0 || e > 4 ) {
-            e = Integer.parseInt(JOptionPane.showInputDialog(null, """
-                    1. Cadastrar nome
-                    2. Lista de nomes
-                    3. Alterar nome
-                    4. Excluir nome
-
-                    0. Sair
-                    """, "MENU", 1));
+        switch (e) {
+            case 1: this.b.adicionar(); break;
+            case 2: this.b.listar(); break;
+            case 3: this.b.alterar(); break;
+            case 4: this.b.remover(); break;
+            case 0: System.exit(0);
+            default: menu(); break;
         }
-        prt(e+"");
-        return e;
     }
 }
