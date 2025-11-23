@@ -9,6 +9,9 @@ public class Response {
 
     public Response(Double valorFinal, double valorParcelas, Integer parcelas, Double valorCupom) {
         this.valorFinal = valorFinal;
+        this.valorParcela = valorParcelas;
+        this.parcelas = parcelas;
+        this.valorCupom = valorCupom;
     }
 
     public double lerTotal() {

@@ -1,10 +1,8 @@
-
-package Universidade;
+package Terminal;
 
 import javax.swing.JOptionPane;
 
 public class Terminal {
-    Uni u = new Uni();
 
     public void prt(String msg) {
         System.out.println(msg);
@@ -26,11 +24,5 @@ public class Terminal {
         return JOptionPane.showInputDialog(msg);
     }
 
-    public void menu() {
-        Integer e = Integer.parseInt(JOptionPane.showInputDialog(null, """
-                   1. Consultar
-                   2. Ver cursos disponíveis
-                3. Sair
-                 """, "MENU", 0));
-    }
+    
 }

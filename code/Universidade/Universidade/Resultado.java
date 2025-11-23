@@ -1,6 +1,5 @@
 package Universidade;
 
-
 public class Resultado {
     Double mensalidade;
     String curso;
@@ -15,18 +14,18 @@ public class Resultado {
     }
 
     public double lerMensalidade() {
-        return 1.0;
+        return this.mensalidade;
     }
 
     public String lerCurso() {
-        return "s";
+        return this.curso;
     }
 
     public String lerBolsa() {
-        return "s";
+        return this.ProgramaBolsa;
     }
 
     public double lerDesc() {
-        return 1.0;
+        return this.desconto;
     }
 }
